@@ -48,7 +48,7 @@
                                 Prices</a>
                         </div>
                         <div class="col-md-12 my-1">
-                            <a class="btn btn-sm btn-success btn-block" href="{{ route('login', 'member') }}"
+                            <a class="btn btn-sm btn-success btn-block" href="{{ route('login') }}"
                                 role="button">SignIn</a>
                         </div>
                     </div>

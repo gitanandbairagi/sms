@@ -1,6 +1,8 @@
 @extends('main.layout.layout')
 
 @section('style')
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="{{ url('assets/adminlte3/plugins/bs-stepper/css/bs-stepper.min.css') }}">
 @endsection
 
 @section('content')
@@ -52,8 +54,8 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 my-1">
-                                            <input name="email" type="email" class="form-control" placeholder="Email"
-                                                value="{{ old('email') }}">
+                                            <input name="email" type="email" class="form-control"
+                                                placeholder="Email" value="{{ old('email') }}">
                                             @error('email')
                                                 <label class="text-danger mt-1 mb-1">{{ $message }}</label>
                                             @enderror
@@ -109,14 +111,15 @@
                                         </div>
                                         <div class="col-sm-12 my-1">
                                             <input name="password" type="password" class="form-control"
-                                                placeholder="Password | Minimum 8 characters" value="{{ old('password') }}">
+                                                placeholder="Password | Minimum 8 characters"
+                                                value="{{ old('password') }}">
                                             @error('password')
                                                 <label class="text-danger mt-1 mb-1">{{ $message }}</label>
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 my-1">
-                                            <input name="password_confirmation" type="password"
-                                                class="form-control" placeholder="Confirm Password"
+                                            <input name="password_confirmation" type="password" class="form-control"
+                                                placeholder="Confirm Password"
                                                 value="{{ old('password_confirmation') }}">
                                             @error('password_confirmation')
                                                 <label class="text-danger mt-1 mb-1">{{ $message }}</label>
@@ -134,7 +137,8 @@
                                         </div>
                                         <div class="col-sm-12 my-1">
                                             <input name="maintenance_amount" type="number" class="form-control"
-                                                placeholder="Maintenance Amount | Don't Worry, You Can Change it Later" value="{{ old('maintenance_amount') }}" min="1">
+                                                placeholder="Maintenance Amount | Don't Worry, You Can Change it Later"
+                                                value="{{ old('maintenance_amount') }}" min="1">
                                             @error('maintenance_amount')
                                                 <label class="text-danger mt-1 mb-1">{{ $message }}</label>
                                             @enderror
@@ -186,4 +190,15 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <!-- BS-Stepper -->
+    <script src="{{ url('assets/adminlte3/plugins/bs-stepper/js/bs-stepper.min.js') }}"></script>
+    <script>
+        // BS-Stepper Init
+        document.addEventListener('DOMContentLoaded', function() {
+            window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+        })
+    </script>
 @endsection

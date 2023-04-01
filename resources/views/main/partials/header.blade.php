@@ -29,7 +29,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="btn btn-sm btn-outline-primary" href="#sectionCheckPrices" role="button">Check Prices</a>
-              <a class="btn btn-sm btn-outline-success" href="{{ route('login', 'member') }}" role="button">SignIn</a>
+              <a class="btn btn-sm btn-outline-success" href="{{ route('login') }}" role="button">SignIn</a>
             </li>
           </ul>
         </div>  

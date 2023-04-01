@@ -17,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ url('assets/adminlte3/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ url('assets/adminlte3/dist/css/adminlte.min.css') }}">
+    {{-- bs-stepper (step-form) --}}
+    <link rel="stylesheet" href="bs-stepper.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @yield('style')
 </head>
@@ -54,6 +56,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     {{-- Custom JS --}}
     <script src="{{ url('resources/js/custom.js?v=15') }}"></script>
     @yield('script')
+    {{-- bs-stepper (step-form) --}}
+    <script src="bs-stepper.min.js"></script>
 </body>
 
 </html>

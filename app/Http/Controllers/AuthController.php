@@ -61,7 +61,7 @@ class AuthController extends Controller
 
     public function logout() {
         session()->flush();
-        return redirect()->route('index');
+        return redirect()->route('login');
     }
 
     public function signup() {
